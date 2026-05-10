@@ -59,14 +59,18 @@
       gap: 12px;
       font-weight: 800;
       letter-spacing: 0;
+      min-width: 0;
+      flex-shrink: 0;
     }
 
-    .brand-logo {
+    .brand-logo,
+    .brand > img {
       display: block;
-      width: 206px;
+      width: clamp(132px, 18vw, 206px);
       height: auto;
-      max-height: 62px;
+      max-height: 58px;
       object-fit: contain;
+      object-position: left center;
     }
 
     .nav-links {
@@ -758,6 +762,11 @@
 
     @media (max-width: 640px) {
       .hero { padding-top: 112px; }
+      .brand-logo,
+      .brand > img {
+        width: clamp(112px, 42vw, 158px);
+        max-height: 50px;
+      }
       .command-center { min-height: 440px; padding: 12px; }
       .dashboard { min-height: 414px; padding: 16px; }
       .dash-footer,
