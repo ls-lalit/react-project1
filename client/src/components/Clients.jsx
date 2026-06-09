@@ -3,9 +3,7 @@ import lionbridgeLogo from "../assets/logos/lionbridge.png";
 import AvalaraLogo from "../assets/logos/Avalara.png";
 import pwcLogo from "../assets/logos/pwc.png";
 import BrillioLogo from "../assets/logos/Brillio.png";
-import InfosysLogo from "../assets/logos/Infosys.png";
-import ConfluentLogo from "../assets/logos/Confluent.png";
-import RiverbedLogo from "../assets/logos/Riverbed.png";
+import InfosysLogo from "../assets/logos/Infosys.png";;
 
 
 function Clients() {
@@ -42,13 +40,6 @@ function Clients() {
         </div>
 
         <div className="client-logo-card">
-          <img src={ConfluentLogo} alt="Confluent logo" />
-        </div>
-
-        <div className="client-logo-card">
-          <img src={RiverbedLogo} alt="Riverbed logo" />
-        </div>
-        <div className="client-logo-card">
           <img src={cambiumLogo} alt="Cambium Learning logo" />
         </div>
         <div className="client-logo-card">
@@ -67,14 +58,6 @@ function Clients() {
 
         <div className="client-logo-card">
           <img src={InfosysLogo} alt="Infosys logo" />
-        </div>
-
-        <div className="client-logo-card">
-          <img src={ConfluentLogo} alt="Confluent logo" />
-        </div>
-
-        <div className="client-logo-card">
-          <img src={RiverbedLogo} alt="Riverbed logo" />
         </div>
       </div>
     </section>

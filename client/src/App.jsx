@@ -1,32 +1,20 @@
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Stats from './components/Stats';
-import Services from './components/Services';
-import Blog from "./components/Blog";
-import Platforms from './components/Platforms';
-import Clients from './components/Clients';
-import WhyChoose from './components/WhyChoose';
-import Process from './components/Process';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from "./components/Navbar";
+import Home from "./pages/home";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Stats />
-      <Services />
-      <Blog />
-      <Platforms />
-      <Clients />
-      <WhyChoose />
-      <Process />
-      <Contact />
-      <Footer />
-    </>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

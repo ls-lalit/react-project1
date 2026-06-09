@@ -9,15 +9,27 @@ function Contact() {
 
   const handleChange = (e) => {
     setFormData({
+
       ...formData,
       [e.target.name]: e.target.value,
+
     });
+    // console.log(e.target.value)
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(formData);
+    const res = await fetch(`http://localhost:5000/api/contact`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+
+    const data = res.json();
+    console.log(data);
 
     alert("Form submitted successfully!");
     setFormData({
