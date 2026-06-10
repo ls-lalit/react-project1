@@ -15,7 +15,6 @@ function Home() {
       <Stats />
       <Services />
       <Platforms />
-      <Clients />
       <WhyChoose />
       <Process />
       <Contact />
