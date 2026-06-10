@@ -21,7 +21,6 @@ function Navbar() {
       <ul className="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#platforms">Platforms</a></li>
-        <li><a href="#clients">Clients</a></li>
         <li><a href="#whychoose">Why Us</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#contact">Contact</a></li>
