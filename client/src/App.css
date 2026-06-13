@@ -938,3 +938,6 @@ body.dark h2 {
 body.dark .hero h1 {
   color: white !important;
 }
+body.dark .ring {
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
