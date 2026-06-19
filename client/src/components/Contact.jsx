@@ -20,7 +20,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`/api/contact`, {
+      const res = await fetch("https://vedenduitsolutions1.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
