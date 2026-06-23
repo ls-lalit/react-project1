@@ -16,13 +16,13 @@ function Hero() {
         </p>
 
         <div className="hero-actions">
-          <button className="btn primary">
+          <a href="#contact" className="btn primary">
             Start a Project
-          </button>
+          </a>
 
-          <button className="btn">
+          <a href="#services" className="btn">
             Explore Services
-          </button>
+          </a>
         </div>
       </div>
 
