@@ -1,28 +1,47 @@
 function Stats() {
   return (
-    <section>
+    <section className="stats-section">
       <div className="stats">
         <div className="stat">
-          <strong>50+</strong>
-          <span>Projects Delivered</span>
+          <div className="stat-icon">💼</div>
+          <div>
+            <strong>50+</strong>
+            <span>Enterprise Projects<br />Delivered</span>
+          </div>
         </div>
 
         <div className="stat">
-          <strong>8</strong>
-          <span>Industries served</span>
+          <div className="stat-icon">☆</div>
+          <div>
+            <strong>98%</strong>
+            <span>Client Satisfaction<br />Rate</span>
+          </div>
         </div>
 
         <div className="stat">
-          <strong>4</strong>
-          <span>Core practices</span>
+          <div className="stat-icon">🏢</div>
+          <div>
+            <strong>8+</strong>
+            <span>Industries<br />Served</span>
+          </div>
         </div>
 
         <div className="stat">
-          <strong>100+</strong>
-          <span>Precent client focus</span>
+          <div className="stat-icon">👥</div>
+          <div>
+            <strong>15+</strong>
+            <span>Years of Combined<br />Experience</span>
+          </div>
+        </div>
+
+        <div className="stat">
+          <div className="stat-icon">📈</div>
+          <div>
+            <strong>30%</strong>
+            <span>Average Process<br />Efficiency Gain</span>
+          </div>
         </div>
       </div>
-      
     </section>
   );
 }

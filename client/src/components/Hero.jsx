@@ -1,10 +1,12 @@
+import newvedlogo from "../assets/newvedlogo.png";
+
 function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-left">
         <div className="kicker">
           <span className="pulse"></span>
-          SALEFORCE + ORACLE SPECIALISTS
+          SALESFORCE • ORACLE • INTEGRATION EXPERTS
         </div>
 
         <h1>
@@ -16,60 +18,78 @@ function Hero() {
         </p>
 
         <div className="hero-actions">
-          <a href="#contact" className="btn primary">
-            Start a Project
+          <a href="/contact" className="btn primary">
+            Book a Free Consultation →
           </a>
 
-          <a href="#services" className="btn">
+          <a href="#services" className="btn outline">
             Explore Services
           </a>
         </div>
+        <div className="hero-features">
+          <div>☑ <span>15+ Years Experience</span></div>
+          <div>♙ <span>Certified Experts</span></div>
+          <div>↻ <span>Agile Delivery</span></div>
+          <div>◇ <span>Client-Focused</span></div>
+        </div>
       </div>
 
-      <div className="command-center">
-        <div className="dashboard">
-          <div className="dash-head">
-            <div>
-              <h3>Integration Command Center</h3>
-              <p>Live architecture preview</p>
-            </div>
-            <div className="status">Systems Online</div>
+      <div className="hero-graphic">
+        <div className="graphic-ring ring-one"></div>
+        <div className="graphic-ring ring-two"></div>
+        <div className="graphic-ring ring-three"></div>
+
+        <div className="connection line-top"></div>
+        <div className="connection line-left"></div>
+        <div className="connection line-right"></div>
+        <div className="connection line-bottom-left"></div>
+        <div className="connection line-bottom-right"></div>
+
+        <div className="graphic-core">
+          <img src={newvedlogo} alt="Vedendu IT Solutions" />
+        </div>
+
+        <div className="graphic-card salesforce">
+          ☁️
+          <div>
+            <strong>Salesforce</strong>
+            <span>CRM</span>
           </div>
+        </div>
 
-          <div className="orbit">
-            <div className="ring one"></div>
-            <div className="ring two"></div>
-
-            <div className="core">
-              Vedendu
-              <br />
-              Stack
-            </div>
-
-            <div className="node cloud">☁️</div>
-            <div className="node diamond">◇</div>
-            <div className="node gear">⚙️</div>
-            <div className="node arrow">↗</div>
+        <div className="graphic-card oracle">
+          🔴
+          <div>
+            <strong>Oracle</strong>
+            <span>Applications</span>
           </div>
+        </div>
 
-          <div className="dash-footer">
-            <div className="mini-stat">
-              <strong>99%</strong>
-              <span>Workflow clarity</span>
-            </div>
+        <div className="graphic-card integration">
+          🔗
+          <div>
+            <strong>Integration</strong>
+            <span>APIs & Middleware</span>
+          </div>
+        </div>
 
-            <div className="mini-stat">
-              <strong>360</strong>
-              <span>Customer view</span>
-            </div>
+        <div className="graphic-card automation">
+          ⚙️
+          <div>
+            <strong>Automation</strong>
+            <span>Workflows</span>
+          </div>
+        </div>
 
-            <div className="mini-stat">
-              <strong>24/7</strong>
-              <span>Cloud ready</span>
-            </div>
+        <div className="graphic-card analytics">
+          📊
+          <div>
+            <strong>Analytics</strong>
+            <span>Insights</span>
           </div>
         </div>
       </div>
+
     </section>
   );
 }
