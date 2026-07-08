@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import vedlogo from "../assets/vedlogo.png";
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleTheme = () => {
     document.body.classList.toggle("dark");
@@ -33,68 +33,49 @@ function Navbar() {
       <nav className={`navbar-center ${menuOpen ? "active" : ""}`}>
         <ul className="nav-links">
           <li className="dropdown">
-            <button className="dropdown-btn"
-              onClick={() =>
-                setOpenDropdown(
-                  openDropdown === "services" ? null : "services"
-                )
-              }
-            >
-              Services ▼
+            <button type="button" className="dropdown-btn">
+              Services
+              <ChevronDown size={16} />
             </button>
 
-            {openDropdown === "services" && (
-              <ul className="dropdown-menu">
-                <li><a href="/#services" onClick={() => setOpenDropdown(null)}>Salesforce Consulting</a></li>
-                <li><a href="/#services" onClick={() => setOpenDropdown(null)}>SAP Integration</a></li>
-                <li><a href="/#services" onClick={() => setOpenDropdown(null)}>Cloud Migration</a></li>
-                <li><a href="/#services" onClick={() => setOpenDropdown(null)}>Custom Development</a></li>
-              </ul>
-            )}
+            <ul className="dropdown-menu">
+              <li><a href="/#Services" onClick={closeMenu}>Salesforce Consulting</a></li>
+              <li><a href="/#Services" onClick={closeMenu}>SAP Integration</a></li>
+              <li><a href="/#Services" onClick={closeMenu}>Cloud Migration</a></li>
+              <li><a href="/#Services" onClick={closeMenu}>Custom Development</a></li>
+
+            </ul>
           </li>
 
           <li className="dropdown">
-            <button className="dropdown-btn"
-              onClick={() =>
-                setOpenDropdown(
-                  openDropdown === "platforms" ? null : "platforms"
-                )
-              }
-            >
-              Platforms ▼
+            <button type="button" className="dropdown-btn">
+              Platforms
+              <ChevronDown size={16} />
             </button>
 
-            {openDropdown === "platforms" && (
-              <ul className="dropdown-menu">
-                <li><a href="/#platforms" onClick={() => setOpenDropdown(null)}>Salesforce</a></li>
-                <li><a href="/#platforms" onClick={() => setOpenDropdown(null)}>SAP</a></li>
-                <li><a href="/#platforms" onClick={() => setOpenDropdown(null)}>Microsoft Azure</a></li>
-                <li><a href="/#platforms" onClick={() => setOpenDropdown(null)}>AWS</a></li>
-              </ul>
-            )}
+            <ul className="dropdown-menu">
+              <li><a href="/#platforms" onClick={closeMenu}>Salesforce</a></li>
+              <li><a href="/#platforms" onClick={closeMenu}>SAP</a></li>
+              <li><a href="/#platforms" onClick={closeMenu}>Microsoft Azure</a></li>
+              <li><a href="/#platforms" onClick={closeMenu}>AWS</a></li>
+            </ul>
           </li>
 
           <li><a href="/#whychoose" onClick={closeMenu}>Why Us</a></li>
 
           <li className="dropdown">
-            <button className="dropdown-btn"
-              onClick={() =>
-                setOpenDropdown(
-                  openDropdown === "resources" ? null : "resources"
-                )
-              }
-            >
-              Resources ▼
+            <button type="button" className="dropdown-btn">
+              Resources
+              <ChevronDown size={16} />
             </button>
 
-            {openDropdown === "resources" && (
-              <ul className="dropdown-menu">
-                <li><a href="/blog" onClick={() => setOpenDropdown(null)}>Blog</a></li>
-                <li><a href="/#resources" onClick={() => setOpenDropdown(null)}>Case Studies</a></li>
-                <li><a href="/#resources" onClick={() => setOpenDropdown(null)}>Whitepapers</a></li>
-                <li><a href="/#resources" onClick={() => setOpenDropdown(null)}>FAQs</a></li>
-              </ul>
-            )}
+            <ul className="dropdown-menu">
+              <li><a href="/#Resources" onClick={closeMenu}>Blog</a></li>
+              <li><a href="/#Resources" onClick={closeMenu}>Case Studies</a></li>
+              <li><a href="/#Resources" onClick={closeMenu}>Whitepapers</a></li>
+              <li><a href="/#Resources" onClick={closeMenu}>FAQs</a></li>
+            </ul>
+
           </li>
 
 
