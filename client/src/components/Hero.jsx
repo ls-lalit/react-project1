@@ -1,4 +1,5 @@
 import newvedlogo from "../assets/newvedlogo.png";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -18,9 +19,9 @@ function Hero() {
         </p>
 
         <div className="hero-actions">
-          <a href="/contact" className="btn primary">
+          <Link to="/contact" className="btn primary">
             Book a Free Consultation →
-          </a>
+          </Link>
 
           <a href="#services" className="btn outline">
             Explore Services

@@ -18,9 +18,9 @@ function CTA() {
         <p>✓ No Obligation. Just Expert Guidance.</p>
       </div>
 
-      <a href="/contact" className="cta-btn">
+      <Link to="/contact" className="cta-btn">
         Schedule Your Free Consultation →
-      </a>
+      </Link>
 
       <div className="cta-icon">📅</div>
     </section>
