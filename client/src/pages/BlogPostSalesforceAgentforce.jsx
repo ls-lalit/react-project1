@@ -1,8 +1,19 @@
 import { Clock, Calendar, ArrowUpRight } from "lucide-react";
 
+/**
+ * BlogDetails — clean, professional company-blog style.
+ * Plain CSS (no Tailwind), scoped with a "bd-" prefix, kept inline in this
+ * file as a <style> block. If you see a "Transform failed" / "Unexpected
+ * token" error pointing at this style block after saving, it's your
+ * editor's autoformatter inserting spaces around hyphens (e.g. turning
+ * "font-size" into "font - size") — turn off format-on-save for this file,
+ * or paste with Ctrl+Shift+V (paste as plain text) to avoid it.
+ *
+ * IMAGES: expects the images to live at IMG_BASE below — copy them into
+ * your project's /public folder at that path.
+ */
 
 const IMG_BASE = "/images/blog/what-is-salesforce-agentforce-guide";
-const BRAND_BLUE = "#1857C4";
 
 export const meta = {
   title: "What Is Salesforce Agentforce? Complete Business Guide (2026)",
@@ -67,15 +78,15 @@ function BlogPostSalesforceAgentforce() {
           background-color: #ffffff;
         }
         .bd-inner {
-          max-width: 840px;
+          max-width: 100%;
           margin: 0 auto;
-          padding: 56px 28px 72px;
+          padding: 72px 64px 96px;
         }
         .bd-tag {
           display: inline-block;
           font-size: 13px;
           font-weight: 600;
-          color: ${BRAND_BLUE};
+          color: #1857c4;
           margin-bottom: 16px;
         }
         .bd-title {
@@ -86,17 +97,19 @@ function BlogPostSalesforceAgentforce() {
           margin-bottom: 16px;
         }
         @media (min-width: 768px) {
-          .bd-title { font-size: 42px; }
+          .bd-title {
+            font-size: 42px;
+          }
         }
         .bd-meta {
           display: flex;
           align-items: center;
           gap: 16px;
           font-size: 14px;
-          color: #6B7280;
+          color: #6b7280;
           padding-bottom: 24px;
           margin-bottom: 32px;
-          border-bottom: 1px solid #E5E7EB;
+          border-bottom: 1px solid #e5e7eb;
         }
         .bd-meta span {
           display: flex;
@@ -104,10 +117,10 @@ function BlogPostSalesforceAgentforce() {
           gap: 6px;
         }
         .bd-p {
-          color: #374151;
-          font-size: 17px;
-          line-height: 1.8;
-          margin-bottom: 20px;
+          color: #1f2937;
+          font-size: 26px;
+          line-height: 1.85;
+          margin-bottom: 24px;
         }
         .bd-h2 {
           font-size: 27px;
@@ -131,19 +144,19 @@ function BlogPostSalesforceAgentforce() {
           margin-bottom: 12px;
         }
         .bd-figure {
-          margin: 32px 0;
+          margin: 44px 0;
         }
         .bd-figure img {
           width: 100%;
           height: auto;
           border-radius: 8px;
-          border: 1px solid #E5E7EB;
+          border: 1px solid #e5e7eb;
           display: block;
         }
         .bd-figure figcaption {
           margin-top: 10px;
           font-size: 13px;
-          color: #9CA3AF;
+          color: #9ca3af;
           line-height: 1.5;
         }
         .bd-bullets {
@@ -151,15 +164,15 @@ function BlogPostSalesforceAgentforce() {
           padding-left: 20px;
         }
         .bd-bullets li {
-          color: #374151;
-          font-size: 16px;
+          color: #1f2937;
+          font-size: 25px;
           line-height: 1.75;
           margin-bottom: 6px;
         }
         .bd-table-wrap {
           overflow-x: auto;
           margin: 28px 0;
-          border: 1px solid #E5E7EB;
+          border: 1px solid #e5e7eb;
           border-radius: 8px;
         }
         .bd-table {
@@ -167,7 +180,9 @@ function BlogPostSalesforceAgentforce() {
           border-collapse: collapse;
           font-size: 14px;
         }
-        .bd-table thead tr { background: #F3F4F6; }
+        .bd-table thead tr {
+          background: #f3f4f6;
+        }
         .bd-table th {
           text-align: left;
           font-weight: 600;
@@ -177,15 +192,17 @@ function BlogPostSalesforceAgentforce() {
         .bd-table td {
           padding: 12px 16px;
           vertical-align: top;
-          border-top: 1px solid #E5E7EB;
-          color: #374151;
+          border-top: 1px solid #e5e7eb;
+          color: #1f2937;
         }
-        .bd-table td.bd-feature { font-weight: 600; color: #111827; }
-
+        .bd-table td.bd-feature {
+          font-weight: 600;
+          color: #111827;
+        }
         .bd-cta {
           margin-top: 36px;
           padding-top: 28px;
-          border-top: 1px solid #E5E7EB;
+          border-top: 1px solid #e5e7eb;
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
@@ -201,11 +218,11 @@ function BlogPostSalesforceAgentforce() {
           border-radius: 6px;
         }
         .bd-cta-primary {
-          background-color: ${BRAND_BLUE};
+          background-color: #1857c4;
           color: #fff;
         }
         .bd-cta-secondary {
-          border: 1px solid #D1D5DB;
+          border: 1px solid #d1d5db;
           color: #111827;
         }
       `}</style>
@@ -530,4 +547,5 @@ function BlogPostSalesforceAgentforce() {
 }
 
 export default BlogPostSalesforceAgentforce;
+// Alias, in case anything imports this by the old name.
 export { BlogPostSalesforceAgentforce as BlogDetails };

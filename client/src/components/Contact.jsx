@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -33,10 +34,6 @@ function Contact() {
           headers: {
             "Content-Type": "application/json",
           },
-          // Combine first/last name into "name" so the existing backend
-          // (which expects { name, email, message }) keeps working
-          // unchanged. Phone is included as an extra field in case you
-          // want to log/read it later.
           body: JSON.stringify({
             name: `${formData.firstName} ${formData.lastName}`.trim(),
             email: formData.email,
@@ -75,6 +72,44 @@ function Contact() {
           Tell us a bit about what you're working on and our team will get
           back to you shortly.
         </p>
+
+        {/* Update the email/phone/address below to your real details */}
+        <ul className="contact-details">
+          <li>
+            <span className="contact-detail-icon">
+              <Mail size={17} strokeWidth={2} />
+            </span>
+            <div>
+              <span className="contact-detail-label">Email</span>
+              <a href="mailto:hello@vedenduitsolutions.com">
+                hello@vedenduitsolutions.com
+              </a>
+            </div>
+          </li>
+          <li>
+            <span className="contact-detail-icon">
+              <Phone size={17} strokeWidth={2} />
+            </span>
+            <div>
+              <span className="contact-detail-label">Phone</span>
+              <a href="tel:+10000000000">+1 (000) 000-0000</a>
+            </div>
+          </li>
+          <li>
+            <span className="contact-detail-icon">
+              <MapPin size={17} strokeWidth={2} />
+            </span>
+            <div>
+              <span className="contact-detail-label">Office</span>
+              <span>Add your office address here</span>
+            </div>
+          </li>
+        </ul>
+
+        <div className="contact-response-note">
+          <Clock size={15} strokeWidth={2} />
+          We typically respond within 24 hours.
+        </div>
       </div>
 
       <form className="contact-card" onSubmit={handleSubmit}>
