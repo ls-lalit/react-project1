@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function CTA() {
   return (
     <section className="cta-section">
