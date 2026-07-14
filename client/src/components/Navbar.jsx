@@ -4,13 +4,13 @@ import { Menu, X } from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import vedlogo from "../assets/vedlogo.png";
 function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
+  //const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleTheme = () => {
-    document.body.classList.toggle("dark");
-    setDarkMode(!darkMode);
-  };
+  // const toggleTheme = () => {
+  //   document.body.classList.toggle("dark");
+  //   setDarkMode(!darkMode);
+  // };
   const closeMenu = () => {
     setMenuOpen(false);
   };
@@ -99,12 +99,12 @@ function Navbar() {
           Book a Free Consultation →
         </Link>
 
-        <button
+        {/* <button
           className="theme-toggle"
           onClick={toggleTheme}
         >
           {darkMode ? "☀️" : "◐"}
-        </button>
+        </button> */}
 
       </div>
     </header >

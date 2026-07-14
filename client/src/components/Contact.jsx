@@ -10,7 +10,6 @@ function Contact() {
     message: "",
   });
   const [notRobot, setNotRobot] = useState(false);
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
