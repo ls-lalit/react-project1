@@ -14,7 +14,6 @@ function Navbar() {
   const closeMenu = () => {
     setMenuOpen(false);
   };
-
   return (
     <header className="topbar">
       <a href="#home" className="brand">
@@ -33,31 +32,17 @@ function Navbar() {
       <nav className={`navbar-center ${menuOpen ? "active" : ""}`}>
         <ul className="nav-links">
           <li className="dropdown">
-            <button type="button" className="dropdown-btn">
+            <a href="/#services" className="dropdown-btn" onClick={closeMenu}>
               Services
               <ChevronDown size={16} />
-            </button>
+            </a>
 
             <ul className="dropdown-menu">
-              <li><a href="/#Services" onClick={closeMenu}>Salesforce Consulting</a></li>
-              <li><a href="/#Services" onClick={closeMenu}>SAP Integration</a></li>
-              <li><a href="/#Services" onClick={closeMenu}>Cloud Migration</a></li>
-              <li><a href="/#Services" onClick={closeMenu}>Custom Development</a></li>
+              <li><a href="/#services" onClick={closeMenu}>Salesforce Consulting</a></li>
+              <li><a href="/#services" onClick={closeMenu}>SAP Integration</a></li>
+              <li><a href="/#services" onClick={closeMenu}>Cloud Migration</a></li>
+              <li><a href="/#services" onClick={closeMenu}>Custom Development</a></li>
 
-            </ul>
-          </li>
-
-          <li className="dropdown">
-            <button type="button" className="dropdown-btn">
-              Platforms
-              <ChevronDown size={16} />
-            </button>
-
-            <ul className="dropdown-menu">
-              <li><a href="/#platforms" onClick={closeMenu}>Salesforce</a></li>
-              <li><a href="/#platforms" onClick={closeMenu}>SAP</a></li>
-              <li><a href="/#platforms" onClick={closeMenu}>Microsoft Azure</a></li>
-              <li><a href="/#platforms" onClick={closeMenu}>AWS</a></li>
             </ul>
           </li>
 
@@ -70,7 +55,7 @@ function Navbar() {
             </button>
 
             <ul className="dropdown-menu">
-              <li><a href="/#Resources" onClick={closeMenu}>Blog</a></li>
+              <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
               <li><a href="/#Resources" onClick={closeMenu}>Case Studies</a></li>
               <li><a href="/#Resources" onClick={closeMenu}>Whitepapers</a></li>
               <li><a href="/#Resources" onClick={closeMenu}>FAQs</a></li>
@@ -78,8 +63,6 @@ function Navbar() {
 
           </li>
 
-
-          <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
           <li><a href="/#about" onClick={closeMenu}>About Us</a></li>
 
           <li className="mobile-consult">
