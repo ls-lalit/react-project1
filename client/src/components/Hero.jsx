@@ -34,59 +34,60 @@ function Hero() {
           <div>◇ <span>Client-Focused</span></div>
         </div>
       </div>
+      <div className="hero-graphic-wrap">
+        <div className="hero-graphic">
+          <div className="graphic-ring ring-one"></div>
+          <div className="graphic-ring ring-two"></div>
+          <div className="graphic-ring ring-three"></div>
 
-      <div className="hero-graphic">
-        <div className="graphic-ring ring-one"></div>
-        <div className="graphic-ring ring-two"></div>
-        <div className="graphic-ring ring-three"></div>
+          <div className="connection line-top"></div>
+          <div className="connection line-left"></div>
+          <div className="connection line-right"></div>
+          <div className="connection line-bottom-left"></div>
+          <div className="connection line-bottom-right"></div>
 
-        <div className="connection line-top"></div>
-        <div className="connection line-left"></div>
-        <div className="connection line-right"></div>
-        <div className="connection line-bottom-left"></div>
-        <div className="connection line-bottom-right"></div>
-
-        <div className="graphic-core">
-          <img src={newvedlogo} alt="Vedendu IT Solutions" />
-        </div>
-
-        <div className="graphic-card salesforce">
-          ☁️
-          <div>
-            <strong>Salesforce</strong>
-            <span>CRM</span>
+          <div className="graphic-core">
+            <img src={newvedlogo} alt="Vedendu IT Solutions" />
           </div>
-        </div>
 
-        <div className="graphic-card oracle">
-          🔴
-          <div>
-            <strong>Oracle</strong>
-            <span>Applications</span>
+          <div className="graphic-card salesforce">
+            ☁️
+            <div>
+              <strong>Salesforce</strong>
+              <span>CRM</span>
+            </div>
           </div>
-        </div>
 
-        <div className="graphic-card integration">
-          🔗
-          <div>
-            <strong>Integration</strong>
-            <span>APIs & Middleware</span>
+          <div className="graphic-card oracle">
+            🔴
+            <div>
+              <strong>Oracle</strong>
+              <span>Applications</span>
+            </div>
           </div>
-        </div>
 
-        <div className="graphic-card automation">
-          ⚙️
-          <div>
-            <strong>Automation</strong>
-            <span>Workflows</span>
+          <div className="graphic-card integration">
+            🔗
+            <div>
+              <strong>Integration</strong>
+              <span>APIs & Middleware</span>
+            </div>
           </div>
-        </div>
 
-        <div className="graphic-card analytics">
-          📊
-          <div>
-            <strong>Analytics</strong>
-            <span>Insights</span>
+          <div className="graphic-card automation">
+            ⚙️
+            <div>
+              <strong>Automation</strong>
+              <span>Workflows</span>
+            </div>
+          </div>
+
+          <div className="graphic-card analytics">
+            📊
+            <div>
+              <strong>Analytics</strong>
+              <span>Insights</span>
+            </div>
           </div>
         </div>
       </div>

@@ -16,13 +16,6 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.body.classList.add("home-no-scroll");
-    return () => {
-      document.body.classList.remove("home-no-scroll");
-    };
-  }, []);
-
-  useEffect(() => {
     if (location.state?.scrollTo) {
       const id = location.state.scrollTo;
       const timer = setTimeout(() => {
@@ -35,13 +28,27 @@ function Home() {
   }, [location.state]);
 
   useEffect(() => {
-    document.documentElement.classList.add("no-scroll-page");
-    document.body.classList.add("no-scroll-page");
+    const mql = window.matchMedia("(max-width: 768px)");
+
+    const applyScrollLock = (isMobile) => {
+      if (isMobile) {
+        document.documentElement.classList.remove("no-scroll-page");
+        document.body.classList.remove("no-scroll-page");
+      } else {
+        document.documentElement.classList.add("no-scroll-page");
+        document.body.classList.add("no-scroll-page");
+      }
+    };
+
+    applyScrollLock(mql.matches);
+    mql.addEventListener("change", (e) => applyScrollLock(e.matches));
+
     return () => {
       document.documentElement.classList.remove("no-scroll-page");
       document.body.classList.remove("no-scroll-page");
     };
   }, []);
+
   return (
     <>
       <div className="snap-container">
