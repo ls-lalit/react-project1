@@ -6,7 +6,6 @@ function Blog() {
     <section id="blog" className="blog">
       <div className="section-head">
         <div className="eyebrow">LATEST BLOGS</div>
-        <h2>Blogs & Articles</h2>
         <p>
           Explore our latest thoughts on Salesforce, Oracle,
           integrations, and enterprise technology.
@@ -18,14 +17,15 @@ function Blog() {
           <div className="blog-card" key={blog.id}>
 
             <img src={blog.image} alt={blog.title} />
+            <div className="blog-card-body">
+              <h3>{blog.title}</h3>
 
-            <h3>{blog.title}</h3>
+              <p>{blog.excerpt}</p>
 
-            <p>{blog.excerpt}</p>
-
-            <Link to={blog.link}>
-              Read More →
-            </Link>
+              <Link to={blog.link}>
+                Read More →
+              </Link>
+            </div>
 
           </div>
         ))}

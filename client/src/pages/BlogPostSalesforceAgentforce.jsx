@@ -1,18 +1,5 @@
 import { Clock, Calendar, ArrowUpRight } from "lucide-react";
 
-/**
- * BlogDetails — clean, professional company-blog style.
- * Plain CSS (no Tailwind), scoped with a "bd-" prefix, kept inline in this
- * file as a <style> block. If you see a "Transform failed" / "Unexpected
- * token" error pointing at this style block after saving, it's your
- * editor's autoformatter inserting spaces around hyphens (e.g. turning
- * "font-size" into "font - size") — turn off format-on-save for this file,
- * or paste with Ctrl+Shift+V (paste as plain text) to avoid it.
- *
- * IMAGES: expects the images to live at IMG_BASE below — copy them into
- * your project's /public folder at that path.
- */
-
 const IMG_BASE = "/images/blog/what-is-salesforce-agentforce-guide";
 
 export const meta = {

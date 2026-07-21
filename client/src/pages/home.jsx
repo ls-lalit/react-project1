@@ -28,23 +28,40 @@ function Home() {
   }, [location.state]);
 
   useEffect(() => {
+    const container = document.querySelector(".snap-container");
+    if (!container) return;
+
     const mql = window.matchMedia("(max-width: 768px)");
+    let pendingReset = false;
 
     const applyScrollLock = (isMobile) => {
       if (isMobile) {
         document.documentElement.classList.remove("no-scroll-page");
         document.body.classList.remove("no-scroll-page");
+        pendingReset = true;
       } else {
         document.documentElement.classList.add("no-scroll-page");
         document.body.classList.add("no-scroll-page");
-
       }
     };
 
     applyScrollLock(mql.matches);
-    mql.addEventListener("change", (e) => applyScrollLock(e.matches));
+
+    const handleChange = (e) => applyScrollLock(e.matches);
+    mql.addEventListener("change", handleChange);
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (pendingReset && !mql.matches) {
+        window.scrollTo(0, 0);
+        container.scrollTop = 0;
+        pendingReset = false;
+      }
+    });
+    resizeObserver.observe(container);
 
     return () => {
+      mql.removeEventListener("change", handleChange);
+      resizeObserver.disconnect();
       document.documentElement.classList.remove("no-scroll-page");
       document.body.classList.remove("no-scroll-page");
     };
