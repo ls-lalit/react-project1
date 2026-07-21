@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Hero from "../components/Hero";
 import TrustedLogos from "../components/TrustedLogos";
 import Stats from "../components/Stats";
-import CTA from "../components/CTA";
+import Contact from "../components/Contact";
 import CaseStudy from "../components/CaseStudy";
 import Services from "../components/Services";
 {/*import Platforms from "../components/Platforms";
@@ -37,6 +37,7 @@ function Home() {
       } else {
         document.documentElement.classList.add("no-scroll-page");
         document.body.classList.add("no-scroll-page");
+
       }
     };
 
@@ -55,7 +56,7 @@ function Home() {
         <div className="snap-section">
           <Hero />
         </div>
-        <div className="snap-section">
+        <div className="snap-section snap-section-center">
           <TrustedLogos />
           <Stats />
         </div>
@@ -71,7 +72,7 @@ function Home() {
           <CaseStudy />
         </div>
         <div className="snap-section">
-          <CTA />
+          <Contact />
         </div>
       </div>
 

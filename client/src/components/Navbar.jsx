@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { ChevronDown } from "lucide-react";
-import vedlogo from "../assets/vedlogo.png";
+import vedlogo from "../assets/image.png";
 function Navbar() {
   //const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
