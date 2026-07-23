@@ -65,9 +65,9 @@ function BlogPostSalesforceAgentforce() {
           background-color: #ffffff;
         }
         .bd-inner {
-          max-width: 100%;
-          margin: 0 auto;
-          padding: 72px 64px 96px;
+          max-width: 1400px;
+          margin: 0;
+          padding: 72px 40px 96px;
         }
         .bd-tag {
           display: inline-block;
@@ -104,8 +104,8 @@ function BlogPostSalesforceAgentforce() {
           gap: 6px;
         }
         .bd-p {
-          color: #1f2937;
-          font-size: 26px;
+          color: #111827;
+          font-size: 29px;
           line-height: 1.85;
           margin-bottom: 24px;
         }
@@ -124,11 +124,11 @@ function BlogPostSalesforceAgentforce() {
           margin-bottom: 16px;
         }
         .bd-h4 {
-          font-size: 18px;
-          font-weight: 600;
+          font-size: 28px;
+          font-weight: 700;
           color: #111827;
-          margin-top: 30px;
-          margin-bottom: 12px;
+          margin-top: 40px;
+          margin-bottom: 16px;
         }
         .bd-figure {
           margin: 44px 0;
@@ -151,8 +151,8 @@ function BlogPostSalesforceAgentforce() {
           padding-left: 20px;
         }
         .bd-bullets li {
-          color: #1f2937;
-          font-size: 25px;
+          color: #111827;
+          font-size: 27px;
           line-height: 1.75;
           margin-bottom: 6px;
         }
@@ -165,7 +165,7 @@ function BlogPostSalesforceAgentforce() {
         .bd-table {
           width: 100%;
           border-collapse: collapse;
-          font-size: 14px;
+          font-size: 22px;
         }
         .bd-table thead tr {
           background: #f3f4f6;
@@ -177,10 +177,10 @@ function BlogPostSalesforceAgentforce() {
           padding: 12px 16px;
         }
         .bd-table td {
-          padding: 12px 16px;
+          padding: 20px 24px;
           vertical-align: top;
           border-top: 1px solid #e5e7eb;
-          color: #1f2937;
+          color: #000000;
         }
         .bd-table td.bd-feature {
           font-weight: 600;
