@@ -1,7 +1,25 @@
 import newvedlogo from "../assets/newvedlogo.png";
 import { Link } from "react-router-dom";
-
+import { useEffect, useRef } from "react";
 function Hero() {
+  const wrapRef = useRef(null);
+
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+
+    const updateScale = () => {
+      const width = el.getBoundingClientRect().width;
+      el.style.setProperty("--hg-scale", (width / 700).toString());
+    };
+
+    updateScale();
+
+    const observer = new ResizeObserver(updateScale);
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <section className="hero" id="home">
       <div className="hero-left">
@@ -34,7 +52,7 @@ function Hero() {
           <div>◇ <span>Client-Focused</span></div>
         </div>
       </div>
-      <div className="hero-graphic-wrap">
+      <div className="hero-graphic-wrap" ref={wrapRef}>
         <div className="hero-graphic">
           <div className="graphic-ring ring-one"></div>
           <div className="graphic-ring ring-two"></div>

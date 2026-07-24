@@ -1957,12 +1957,11 @@ html.no-scroll-page {
 
 .hero-graphic-wrap {
   position: relative;
-  width: 100%;
+  width: min(100%, 700px);
   max-width: 700px;
   aspect-ratio: 700 / 540;
   margin: 0 auto;
-  overflow: hidden;
-  --hg-scale: 1;
+  overflow: hidden; 
 }
 
 .hero-graphic {
@@ -1972,7 +1971,7 @@ html.no-scroll-page {
   width: 700px;
   height: 540px;
   transform-origin: top center;
-  transform: translateX(-50%) scale(var(--hg-scale));
+  transform: translateX(-50%) scale(var(--hg-scale, 1));
 }
 
 @media (max-width: 1024px) {
